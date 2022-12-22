@@ -178,14 +178,18 @@ public class DemoApplication {
 		int randid = (int)(Math.random() * filmrepo.count() - 1) + 1;
 		Collection<Film> watchedfilms = filmrepo.getWatchedFilms(custid);
 		Film randfilm = null;
-		for(int x = 0; x < filmrepo.getWatchedFilms(custid).size(); x++){
+
+		if(watchedfilms.size() != 0){
 			for(Film films: watchedfilms)
 				if(randid == films.getFilmid()){
 					getRandomFilm(custid);
 				}
-			else{
-				randfilm = getFilmById(randid);
-			}
+				else{
+					randfilm = getFilmById(randid);
+				}
+		}
+		else{
+			randfilm = getFilmById(randid);
 		}
 		FilmWithCat newfilm = new FilmWithCat(randfilm, getCatOfFilm(randfilm.getFilmid()));
 		return newfilm ;
