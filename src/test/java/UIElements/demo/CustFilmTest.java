@@ -12,9 +12,10 @@ public class CustFilmTest {
 
     @Test
     public void testSettersAndGetters(){
-        CustFilm custfilm = new CustFilm();
         Film film = new Film();
         Customer cust = new Customer();
+        CustFilm custfilm = new CustFilm(cust, film);
+        Assertions.assertNotNull(custfilm);
         custfilm.setFilm(film);
         custfilm.setCustomer(cust);
         Assertions.assertNotNull(custfilm.getFilm());

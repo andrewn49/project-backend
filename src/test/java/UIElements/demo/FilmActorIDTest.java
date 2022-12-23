@@ -5,8 +5,16 @@ import org.junit.jupiter.api.Test;
 
 public class FilmActorIDTest {
     @Test
-    public void testConstructor(){
+    public void testEmptyConstructor() {
         FilmActorId filmactorid = new FilmActorId();
+        Assertions.assertNotNull(filmactorid);
+    }
+
+    @Test
+    public void testConstructor(){
+        Film film = new Film();
+        Actor actor = new Actor();
+        FilmActorId filmactorid = new FilmActorId(film, actor);
         Assertions.assertNotNull(filmactorid);
     }
 }
