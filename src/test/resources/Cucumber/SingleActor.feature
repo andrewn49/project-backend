@@ -8,4 +8,4 @@ Feature: Get a specific actor
       | actorid | firstname | lastname      |
       |    1    | PENELOPE  | GUINESS       |
       |    5    | JOHNNY    | LOLLOBRIGIDA  |
-      |    3    | MIKE      | WILSON        |
+      |    3    | ED        | CHASE         |
