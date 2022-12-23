@@ -14,17 +14,4 @@ public class FilmCatId implements Serializable {
         film = fid;
         category = cid;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        FilmCatId filmCatId = (FilmCatId) o;
-        return Objects.equals(film, filmCatId.film) && Objects.equals(category, filmCatId.category);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(film, category);
-    }
 }
