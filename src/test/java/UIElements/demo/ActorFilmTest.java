@@ -20,6 +20,5 @@ public class ActorFilmTest {
         actorfilm.setActor(actor);
         Assertions.assertNotNull(actorfilm.getFilm());
         Assertions.assertNotNull(actorfilm.getActor());
-        Assertions.assertInstanceOf(ActorFilm.class, actorfilm);
     }
 }
