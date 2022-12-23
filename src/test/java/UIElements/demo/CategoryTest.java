@@ -14,7 +14,7 @@ public class CategoryTest {
     @Test
     public void testConstructor(){
         Category cat = new Category("testname");
-        Assertions.assertEquals("firstname", cat.getCatname(), "Actor first name is not set correctly");
+        Assertions.assertEquals("testname", cat.getCatname(), "Category name is not set correctly");
         cat.setCategoryid(2);
         Assertions.assertEquals(2, cat.getCategoryid(), "Category id not set correctly");
         cat.setCatname("new");
